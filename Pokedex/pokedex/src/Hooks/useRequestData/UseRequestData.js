@@ -13,6 +13,7 @@ export const useRequestData = (url) => {
       .then((res) => {
         setIsLoading(false);
         setData(res.data);
+        console.log(res.data)
       })
       .catch((error) => {
         setIsLoading(false);
