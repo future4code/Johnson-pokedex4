@@ -17,7 +17,7 @@ export default function Router() {
           <PokedexPage />
         </Route>
 
-        <Route exact path={"/detalhes/pokemon"}>
+        <Route exact path={`/detalhes/pokemon/:nome`}>
           <DetailPage />
         </Route>
 

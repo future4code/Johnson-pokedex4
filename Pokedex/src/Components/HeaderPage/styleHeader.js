@@ -7,5 +7,5 @@ export const ContainerHeader = styled.div`
   align-items: center;
   justify-content: space-around;
   height: 10vh;
-  background-color: #7130c7;
+  background-color: #7130c5;
 `;

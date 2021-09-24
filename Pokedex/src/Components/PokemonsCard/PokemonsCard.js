@@ -1,9 +1,13 @@
 import { Button } from "@material-ui/core";
 import React from "react";
-import { PokeCardContainer  } from "./stylePokeCard";
+import { useHistory } from "react-router";
+import { goToDetailPokemon } from "../../routes/coordinator";
+import { PokeCardContainer } from "./stylePokeCard";
 
 export default function PokemonsCard(props) {
   const poke = props.poke;
+  const history = useHistory();
+
   return (
     <>
       <PokeCardContainer sx={{ maxWidth: 345 }}>
@@ -21,8 +25,13 @@ export default function PokemonsCard(props) {
           <Button variant={"contained"} size="small">
             Adicionar
           </Button>
-          <Button variant={"contained"} size="small">
-            Remover
+
+          <Button
+            onClick={() => goToDetailPokemon(history, poke.name)}
+            variant={"outlined"}
+            size="small"
+          >
+            Ver Detalhes
           </Button>
         </div>
       </PokeCardContainer>

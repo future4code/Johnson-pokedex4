@@ -1,5 +1,3 @@
-
-
 export const goToHomePage = (history) => {
   history.push("/");
 };
@@ -12,9 +10,9 @@ export const goToApplicationFormPage = (history) => {
   history.push("/detalhes/pokemon");
 };
 
-export const goToLoginPage = (history) => {
-  history.push("");
+export const goBack = (history) => {
+  history.goBack();
 };
-export const goToTripDetailsPage = (history, id) => {
-  history.push(`/admin/trips/${id}`);
+export const goToDetailPokemon = (history, name) => {
+  history.push(`/detalhes/pokemon/${name}`);
 };
