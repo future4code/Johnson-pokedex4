@@ -4,10 +4,14 @@ import PokemonsCard from "../../Components/PokemonsCard/PokemonsCard";
 import { ContainerHeader } from "../../Components/HeaderPage/styleHeader";
 import { Button } from "@material-ui/core";
 import { ContainerGrid } from "./styledHome";
+import { useHistory } from "react-router-dom";
+import { goToPokedex } from "../../routes/coordinator";
+
 import axios from "axios";
 
 export default function HomePage() {
   const [data, setdata] = useState([]);
+  const history = useHistory();
 
   useEffect(() => {
     axios
@@ -30,7 +34,11 @@ export default function HomePage() {
   return (
     <>
       <ContainerHeader>
-        <Button variant={"contained"} color={"primary"}>
+        <Button
+          onClick={() => goToPokedex(history)}
+          variant={"contained"}
+          color={"primary"}
+        >
           Ver minha Pokedex
         </Button>
         <HeaderPageHome nome={"Lista de Pokemons (vindas da API)"} />
