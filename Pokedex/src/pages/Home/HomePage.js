@@ -3,6 +3,7 @@ import HeaderPageHome from "../../Components/HeaderPage/HeaderPageHome";
 import PokemonsCard from "../../Components/PokemonsCard/PokemonsCard";
 import { ContainerHeader } from "../../Components/HeaderPage/styleHeader";
 import { Button } from "@material-ui/core";
+import { ContainerGrid } from "./styledHome";
 import axios from "axios";
 
 export default function HomePage() {
@@ -20,6 +21,12 @@ export default function HomePage() {
       });
   }, []);
 
+  const pokeList =
+    data &&
+    data.map((poke) => {
+      return <PokemonsCard poke={poke} />;
+    });
+
   return (
     <>
       <ContainerHeader>
@@ -28,10 +35,9 @@ export default function HomePage() {
         </Button>
         <HeaderPageHome nome={"Lista de Pokemons (vindas da API)"} />
       </ContainerHeader>
-      {data &&
-        data.map((poke) => {
-          return <PokemonsCard poke={poke} />;
-        })}
+      <ContainerGrid>
+        {pokeList && pokeList.length > 0 ? pokeList : <p>Carregando...</p>}
+      </ContainerGrid>
     </>
   );
 }
