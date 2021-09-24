@@ -8,6 +8,9 @@ export const ContainerGrid = styled.div`
   margin: 10px auto;
   gap: 8px;
  
+ 
   
 `
-
+export const BackgroundBody = styled.div`
+ background-color: #00f0ff;
+`

@@ -3,7 +3,7 @@ import HeaderPageHome from "../../Components/HeaderPage/HeaderPageHome";
 import PokemonsCard from "../../Components/PokemonsCard/PokemonsCard";
 import { ContainerHeader } from "../../Components/HeaderPage/styleHeader";
 import { Button } from "@material-ui/core";
-import { ContainerGrid } from "./styledHome";
+import { ContainerGrid , BackgroundBody } from "./styledHome";
 import { useHistory } from "react-router-dom";
 import { goToPokedex } from "../../routes/coordinator";
 
@@ -32,7 +32,7 @@ export default function HomePage() {
     });
 
   return (
-    <>
+    <BackgroundBody>
       <ContainerHeader>
         <Button
           onClick={() => goToPokedex(history)}
@@ -46,6 +46,6 @@ export default function HomePage() {
       <ContainerGrid>
         {pokeList && pokeList.length > 0 ? pokeList : <p>Carregando...</p>}
       </ContainerGrid>
-    </>
+    </BackgroundBody>
   );
 }
