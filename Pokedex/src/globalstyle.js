@@ -8,8 +8,12 @@ const GlobalStyle = createGlobalStyle`
    }
 
    body{
-       width: 100%;
-       height: 100%;
+       width: 100vw;
+       height: 100vh;
+       /* background-image: url("https://observatoriodocinema.uol.com.br/wp-content/uploads/2020/04/kit-especial-pokemon-go-personalizados-pokemon.jpg");
+       background-size: cover; */
+       background-color: aqua;
+      
    }
 
   
