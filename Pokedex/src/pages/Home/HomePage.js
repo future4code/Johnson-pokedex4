@@ -18,7 +18,6 @@ export default function HomePage() {
     axios
       .get("https://pokeapi.co/api/v2/pokemon")
       .then((res) => {
-        console.log(res.data);
         setdata(res.data.results);
       })
       .catch((e) => {
@@ -33,7 +32,7 @@ export default function HomePage() {
     });
 
   return (
-    <BackgroundBody>
+    <>
       <ContainerHeader>
         <Button
           onClick={() => goToPokedex(history)}
@@ -57,6 +56,6 @@ export default function HomePage() {
           </>
         )}
       </ContainerGrid>
-    </BackgroundBody>
+    </>
   );
 }

@@ -2,12 +2,13 @@ import styled from "styled-components";
 
 export const ContainerGrid = styled.div`
   display: grid;
-  max-width: 100%;
-  grid-template-rows: repeat(5, 1fr);
-  grid-template-columns: repeat(4, 1fr);
+  width: 100vw;
+  height: 100vh;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(400px,auto)) ;
   margin: 10px auto;
   gap: 8px;
-`;
-export const BackgroundBody = styled.div`
-  background-color: #00f0ff;
+ 
+  justify-items: center;
+
 `;
