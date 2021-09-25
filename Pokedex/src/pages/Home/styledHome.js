@@ -7,8 +7,7 @@ export const ContainerGrid = styled.div`
   grid-template-rows: repeat(2, 1fr);
   grid-template-columns: repeat(auto-fit, minmax(400px,auto)) ;
   margin: 10px auto;
-  gap: 8px;
- 
+  gap: 8px; 
   justify-items: center;
 
 `;

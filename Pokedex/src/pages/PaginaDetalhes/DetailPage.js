@@ -4,11 +4,12 @@ import { Button } from "@material-ui/core";
 import HeaderPageHome from "../../Components/HeaderPage/HeaderPageHome";
 import { useParams, useHistory } from "react-router";
 import { goBack } from "../../routes/coordinator";
+import { PageContainer } from "./styledDetailPage";
 
 import axios from "axios";
 
 export default function DetailPage() {
-  //setando o estado dos dados da Api 
+  //setando o estado dos dados da Api
   const [dataPoke, setdataPoke] = useState();
   const [stats, setstats] = useState();
   // const [move, setmove] = useState()
@@ -50,26 +51,29 @@ export default function DetailPage() {
           Adicionar/Remover da Pokedex
         </Button>
       </ContainerHeader>
-      <h1>{dataPoke && dataPoke.name}</h1>
-   <div>
-        <img
-          src={dataPoke && dataPoke.sprites.front_default}
-          alt="foto do pokemon"
-        />
-      </div> 
-      <div>
-        <img
-          src={dataPoke && dataPoke.sprites.back_default}
-          alt={"foto pokemon de costas"}
-        />
-      </div> 
-      <p>
-        {stats &&
-          stats.map((i, index) => {
-            return <li key={index}>{i.base_stat}</li>;
-          })}
-      </p>
-    
+      <PageContainer>
+        <div>
+          <div>
+            <img
+              src={dataPoke && dataPoke.sprites.front_default}
+              alt="foto do pokemon"
+            />
+          </div>
+          <div>
+            <img
+              src={dataPoke && dataPoke.sprites.back_default}
+              alt={"foto pokemon de costas"}
+            />
+          </div>
+        </div>
+        <div>
+          {stats &&
+            stats.map((i, index) => {
+              return <div key={index}> {i.stat.name}: {i.base_stat} </div>;
+            })}
+        </div>
+        <div>adassdfsdf</div>
+      </PageContainer>
     </>
   );
 }
