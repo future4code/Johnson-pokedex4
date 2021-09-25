@@ -4,7 +4,14 @@ import { Button } from "@material-ui/core";
 import HeaderPageHome from "../../Components/HeaderPage/HeaderPageHome";
 import { useParams, useHistory } from "react-router";
 import { goBack } from "../../routes/coordinator";
-import { PageContainer } from "./styledDetailPage";
+import {
+  PageContainer,
+  ContainerImgs,
+  ContainerStats,
+  ContainerTypes,
+  ContainerMoves,
+  ContainerTypesMoves
+} from "./styledDetailPage";
 
 import axios from "axios";
 
@@ -53,26 +60,39 @@ export default function DetailPage() {
       </ContainerHeader>
       <PageContainer>
         <div>
-          <div>
+          <ContainerImgs>
             <img
               src={dataPoke && dataPoke.sprites.front_default}
               alt="foto do pokemon"
             />
-          </div>
-          <div>
+          </ContainerImgs>
+          <ContainerImgs>
             <img
               src={dataPoke && dataPoke.sprites.back_default}
               alt={"foto pokemon de costas"}
             />
-          </div>
+          </ContainerImgs>
         </div>
-        <div>
+        <ContainerStats>
           {stats &&
             stats.map((i, index) => {
-              return <div key={index}> {i.stat.name}: {i.base_stat} </div>;
+              return (
+                <div key={index}>
+                  {" "}
+                  {i.stat.name}: {i.base_stat}{" "}
+                </div>
+              );
             })}
-        </div>
-        <div>adassdfsdf</div>
+        </ContainerStats>
+        <ContainerTypesMoves>
+          <ContainerTypes>Type1 Type2</ContainerTypes>
+          <ContainerMoves>
+            <h5>Moves</h5>
+            <p>Move name1</p>
+            <p>Move name2</p>
+            <p>Move name3</p>
+          </ContainerMoves>
+        </ContainerTypesMoves>
       </PageContainer>
     </>
   );
