@@ -9,7 +9,7 @@ export default function PokedexPage() {
   const history = useHistory();
 
   return (
-    <div>
+    <>
       <ContainerHeader>
         <Button
           onClick={() => goToHomePage(history)}
@@ -20,6 +20,7 @@ export default function PokedexPage() {
         </Button>
         <HeaderPageHome nome={"Pokedex"} />
       </ContainerHeader>
-    </div>
+      <div></div>
+    </>
   );
 }

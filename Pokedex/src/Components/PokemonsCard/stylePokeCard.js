@@ -1,4 +1,3 @@
-
 import styled from "styled-components";
 
 export const PokeCardContainer = styled.div`
@@ -9,7 +8,7 @@ export const PokeCardContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  flex-direction: column; 
+  flex-direction: column;
   padding: 8px;
   border: 1px solid black;
   border-radius: 5px;
@@ -23,9 +22,7 @@ export const PokeCardContainer = styled.div`
     border-radius: 50%;
   }
 
-  button{
+  button {
     margin: 4px;
   }
 `;
-
-

@@ -1,5 +1,5 @@
 import React from "react";
-import {ContainerHeader} from "./styleHeader"
+import { ContainerHeader } from "./styleHeader";
 
 export default function HeaderPageHome(props) {
   return (

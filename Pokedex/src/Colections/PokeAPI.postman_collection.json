@@ -1,75 +1,59 @@
 {
-	"info": {
-		"_postman_id": "2c3ef4cf-aad1-414d-a0cc-cdfa0326f34e",
-		"name": "PokeAPI",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
-	},
-	"item": [
-		{
-			"name": "GetAllPokemons",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [],
-				"body": {
-					"mode": "formdata",
-					"formdata": []
-				},
-				"url": {
-					"raw": "https://pokeapi.co/api/v2/pokemon",
-					"protocol": "https",
-					"host": [
-						"pokeapi",
-						"co"
-					],
-					"path": [
-						"api",
-						"v2",
-						"pokemon"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "GetDetailPokemon",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "https://pokeapi.co/api/v2/pokemon/1/?id",
-					"protocol": "https",
-					"host": [
-						"pokeapi",
-						"co"
-					],
-					"path": [
-						"api",
-						"v2",
-						"pokemon",
-						"1",
-						""
-					],
-					"query": [
-						{
-							"key": "id",
-							"value": null
-						}
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Aumentado a lista",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": null
-			},
-			"response": []
-		}
-	]
+  "info": {
+    "_postman_id": "2c3ef4cf-aad1-414d-a0cc-cdfa0326f34e",
+    "name": "PokeAPI",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "GetAllPokemons",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": []
+        },
+        "url": {
+          "raw": "https://pokeapi.co/api/v2/pokemon",
+          "protocol": "https",
+          "host": ["pokeapi", "co"],
+          "path": ["api", "v2", "pokemon"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GetDetailPokemon",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://pokeapi.co/api/v2/pokemon/1/?id",
+          "protocol": "https",
+          "host": ["pokeapi", "co"],
+          "path": ["api", "v2", "pokemon", "1", ""],
+          "query": [
+            {
+              "key": "id",
+              "value": null
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Aumentado a lista",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": null
+      },
+      "response": []
+    }
+  ]
 }
