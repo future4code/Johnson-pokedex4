@@ -10,7 +10,7 @@ import {
   ContainerStats,
   ContainerTypes,
   ContainerMoves,
-  ContainerTypesMoves
+  ContainerTypesMoves,
 } from "./styledDetailPage";
 
 import axios from "axios";
@@ -19,7 +19,8 @@ export default function DetailPage() {
   //setando o estado dos dados da Api
   const [dataPoke, setdataPoke] = useState();
   const [stats, setstats] = useState();
-  // const [move, setmove] = useState()
+  const [types, settypes] = useState();
+  const [move, setmove] = useState();
 
   //passando os parametros "guradados na URL"
   const params = useParams();
@@ -36,12 +37,17 @@ export default function DetailPage() {
         console.log(res.data);
         setdataPoke(res.data);
         setstats(res.data.stats);
+        settypes(res.data.types);
+        setmove(res.data.moves);
+
         // setmove(res.data.moves)
       })
       .catch((e) => {
         console.log(e);
       });
   }, []);
+
+  const filterMove = move && move.slice(0, 3);
 
   return (
     <>
@@ -78,19 +84,24 @@ export default function DetailPage() {
             stats.map((i, index) => {
               return (
                 <div key={index}>
-                  {" "}
-                  {i.stat.name}: {i.base_stat}{" "}
+                  {i.stat.name}: {i.base_stat}
                 </div>
               );
             })}
         </ContainerStats>
         <ContainerTypesMoves>
-          <ContainerTypes>Type1 Type2</ContainerTypes>
+          <ContainerTypes>
+            {types &&
+              types.map((typ) => {
+                return <li key={typ}>{typ.type.name}</li>;
+              })}
+          </ContainerTypes>
           <ContainerMoves>
             <h5>Moves</h5>
-            <p>Move name1</p>
-            <p>Move name2</p>
-            <p>Move name3</p>
+            {filterMove &&
+              filterMove.map((move) => {
+                return <li>{move.move.name}</li>;
+              })}
           </ContainerMoves>
         </ContainerTypesMoves>
       </PageContainer>

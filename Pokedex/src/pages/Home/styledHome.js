@@ -5,9 +5,8 @@ export const ContainerGrid = styled.div`
   width: 100vw;
   height: 100vh;
   grid-template-rows: repeat(2, 1fr);
-  grid-template-columns: repeat(auto-fit, minmax(400px,auto)) ;
+  grid-template-columns: repeat(auto-fit, minmax(400px, auto));
   margin: 10px auto;
-  gap: 8px; 
+  gap: 8px;
   justify-items: center;
-
 `;
