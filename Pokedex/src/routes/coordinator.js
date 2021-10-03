@@ -13,6 +13,8 @@ export const goToApplicationFormPage = (history) => {
 export const goBack = (history) => {
   history.goBack();
 };
-export const goToDetailPokemon = (history, name) => {
-  history.push(`/detalhes/pokemon/${name}`);
+export const goToDetailPokemon = (history, nome, isPokedex) => {
+  isPokedex
+    ? history.push(`/detalhes/pokemon/${nome}/telaPokedex`)
+    : history.push(`/detalhes/pokemon/${nome}`);
 };

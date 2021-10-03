@@ -5,7 +5,7 @@ import PokedexPage from "../pages/Pokedex/PokedexPage";
 import DetailPage from "../pages/PaginaDetalhes/DetailPage";
 import ErrorPage from "../pages/PaginaDeErro/ErrorPage";
 
-export default function Router() {
+export default function Router(props) {
   return (
     <BrowserRouter>
       <Switch>
