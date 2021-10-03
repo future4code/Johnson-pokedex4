@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { ContainerHeader } from "../../Components/HeaderPage/styleHeader";
 import { Button } from "@material-ui/core";
 import HeaderPageHome from "../../Components/HeaderPage/HeaderPageHome";
@@ -20,7 +20,6 @@ export default function PokedexPage() {
         </Button>
         <HeaderPageHome nome={"Pokedex"} />
       </ContainerHeader>
-      <div></div>
     </>
   );
 }

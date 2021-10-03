@@ -34,7 +34,6 @@ export default function DetailPage() {
     axios
       .get(`https://pokeapi.co/api/v2/pokemon/${params.nome}`)
       .then((res) => {
-        console.log(res.data);
         setdataPoke(res.data);
         setstats(res.data.stats);
         settypes(res.data.types);
