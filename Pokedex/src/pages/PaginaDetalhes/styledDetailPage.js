@@ -25,7 +25,7 @@ export const ContainerStats = styled.div`
   flex-direction: column;
   text-align: center;
   margin-top: 15px;
-  width: 200px;
+  width: 400px;
   height: 415px;
   font-weight: bold;
   border: 1px solid black;

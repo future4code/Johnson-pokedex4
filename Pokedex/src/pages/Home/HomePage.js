@@ -30,7 +30,7 @@ export default function HomePage() {
         >
           Ver minha Pokedex
         </Button>
-        <HeaderPageHome nome={"Lista de Pokemons (vindas da API)"} />
+        <HeaderPageHome nome={"Lista de Pokemons"} />
       </ContainerHeader>
       <ContainerGrid>
         {pokeList && pokeList.length > 0 ? (

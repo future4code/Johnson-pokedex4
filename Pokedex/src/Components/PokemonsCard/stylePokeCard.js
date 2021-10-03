@@ -14,11 +14,9 @@ export const PokeCardContainer = styled.div`
   border-radius: 5px;
   overflow: hidden;
   box-shadow: 10px 5px 5px black;
-  background-color: #fff;
-  opacity: 0.8;
 
   img {
-    width: 50%;
+   max-width: 50%;
     border-radius: 50%;
   }
 
