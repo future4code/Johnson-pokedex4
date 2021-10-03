@@ -8,5 +8,5 @@ export const ContainerGrid = styled.div`
   grid-template-columns: repeat(auto-fit, minmax(400px, auto));
   margin: 10px auto;
   gap: 8px;
-  justify-items: center;
+  justify-items: center;  
 `;
