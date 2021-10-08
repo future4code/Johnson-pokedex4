@@ -27,7 +27,7 @@ Projeto baseado em 3 páginas onde o usuário tem acesso a uma lista de pokemons
 
 ## 🌎 Como acessar o projeto
 
-- [Link do surge](https://astro-print-ale.surge.sh/)
+
 
 ## 🚀 Tecnologias utilizadas
 
